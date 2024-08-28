@@ -6,8 +6,6 @@ It's time to get your finger exercises in and start writing some code. You must 
 - Your grade
 - Your email address as a link. Bonus points for using the correct attribute to make the link open the user's email client.
 
-Five links that you use on a regular basis in a list element.
-
 A biography telling your history of school. Specifically, I'd like answers to the following questions:
     *What different schools have you attended?
     *What teacher had the greatest influence on you (so far)? Why?
