@@ -1,5 +1,5 @@
 Links are a fundamental part of what makes the World Wide Web a _web_. Being able to link directly from one document to another adds a superpower to information presentation. Your users don't have to rely on citations or references and can go directly from your page to another page on the Internet. 
-Links can be used very flexibly on a web page. They're found in navigation bars, text, on images, and in footers. Because links are so prolific, there are some best practices you should use when adding links to your page.
+Links can be used very flexibly on a web page. They're found in navigation bars, text, on images, and in footers. Because links are so prolific, there are some best practices you should use when adding links to your page:
 
 - Navigation items are linked in unordered lists
 - Links can be wrapped around block-level elements like headers or images. Instead of text, wrap your element and it will make it clickable.
@@ -14,12 +14,13 @@ A link on `example.com` can be formatted as `<a href="/about">About</a>` to rout
 
 In this exercise, you're going to create a very simple page on a topic you already know something about. It should have:
 
-- Correct semantic text elements
+- Correct semantic text elements (look at ex02 if you need reminders)
 - A linked heading
 - A list with at least one link
 - A paragraph with at least one link
 - An image wrapped in a link
 
-One of your links should include the `title` attribute.
+Bonus challenge: 
+- Add a link which opens in a new tab
 
 You can start from scratch or use the simple template attached.
