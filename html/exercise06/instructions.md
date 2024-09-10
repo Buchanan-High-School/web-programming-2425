@@ -1,81 +1,53 @@
-# Packing a Website
+# HTML Tables
 
-So far, you've been building _single page websites_, with everything all in one file. This works for small projects, but often, you will have entire directories (folders) full of HTML pages or HTML snippets that are stitched together when the client requests the page. The same is true for assets like images or other code files which help the site look and function correctly.
+Tables used to be used for all web page layout. You would design a page and then manipulat table colums, rows, and cells to display the content in something that tried to match traditional print layout. 
 
-In this section, you'll be learning how to link internally to multiple pages you control. You'll need to use the skills you've developed so far to put the pieces together for a small, functional website.
+We don't use tables anymore for layout. Now we use Cascading Style Sheets (CSS, our next unit) to layout websites. It is much more flexible and allows website creators to separate the _content_ from the _display_. You're able to create much more flexible web pages because you don't have to re-write all your content to fit a new design.
 
-## Folder structure
+HTML tables are still used for _tabular data_ - information that is best shown in a series of rows and columns. This could be anything from Spotify streaming data to a banking app showing your transactions.
 
-Websites live in _directories_ - folders - on web servers. For this task, I've set up a basic folder structure that you will use. It looks like this:
+## Markup
 
-```text
-.
-└── main/
-    ├── index.html
-    ├── pages/
-    │   ├── sub-page1.html
-    │   └── sub-page2.html
-    └── img/
-        ├── image1.jpg
-        └── image2.jpg
-```
-
-There are several things to pay attention to:
-
-1. `index.html` is your main page. This is the page that loads when the user goes to your URL.
-2. `pages` and `img` are _directories_. Note the slash (`/`) at the end of the name - that means that it is a folder with other items in it.
-3. `pages/sub-page1.html` and `pages/sub-page2.html` are other HTML pages which can be linked to from your home page (and to each other, or back to home, etc.).
-4. `img/image1.jpg` and `img/image2.jpg` are just pictures you want to use on your site.
-
-## Links
-
-You've already learned that the anchor element, `<a>`, is used to link between pages. When we're sending users to other websites, we use a full web address:
+Tables use the following markup:
 
 ```html
-<a href="https://example.com">Some link</a>
+<table>
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th>Days</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>January</td>
+      <td>31</td>
+    </tr>
+    <!-- more data ... -->
+  </tbody>
+</table>
 ```
 
-This is called an _absolute URL_ which points to an exact spot on the Internet.
+The `<table>` element is similar to form - it is a wrapper which includes several elements:
 
-When you control the resources, you can use a structure called a _relative URL_. It's a shortened version of a link that points to another spot _on your website_ rather than to a spot on a different page.
+- `<thead>` - "Table head," a wrapper for the column labels
+- `<th>` - "Table heading," an individual column heading (Month)
+- `<tbody>` - "Table body," the main body of data for the table display
+- `<tr>` - "Table row," a wrapper for all data in a given row
+- `<td>` - "Table data," an individual cell in the table for data
 
-If you're linking to another resource you own, you can use a _relative URL_ like this:
+The tricky part about tables is remember what is a _wrapper_ vs what represents _content_. Some general rules:
 
-```html
-<!-- in index.html -->
-<a href="pages/sub-page1.html">Check out this other page I run</a>
-```
-
-Images are similar:
-
-```html
-<!-- in index.html -->
-<img src="img/image1.jpg" alt="..." />
-```
-
-### Moving across directories
-
-The examples above will work from `index.html` because it is at the _same level_ as the folders (look at the indentation). You will run into problems if you try to link from a _lower_ folder into a _higher_ folder. There is a special syntax which tells the browser to go _up_ instead of _down_.
-
-Assume you're editing `sub-page1.html` and you want to link back to `index.html` which is _up_ one folder:
-
-```html
-<!-- on sub-page1.html -->
- <a href="../index.html">Go back home</a>
-```
-
-Notice the `..` in front of the slash - this tells the browser, "go up one directory" to find the right file. The great thing about this is that your editor will show you folders and file when you're linking.
-
-## Try it
-
-In `index.html`, start a link tag and begin typing a relative URL. You should see a list of directories and files available at that level. You can use the double dot (`..`) and slashes (`/`) in combination to move up and down and around your directories.
+1. The `<thead>` element generally has one `<tr>` with several `<th>` columns.
+2. The table body will have several `<tr>` elements (as many as needed for the table)
+3. You _can_ include a table footer (`<tfoot>`) for things like summary data for the column, but they're not common.
 
 ## Assignment
 
-For this assignment, create a simple `index.html` page which:
+Pick some data you want to display in a table. This can be anything (do some research if you need to) you're interested in.
 
-1. has a valid `<nav>` landmark element with links to each of the sub pages.
-2. includes both images from the `img` directory
-3. a valid `<footer>` element with a copyright date and your name.
-
-**Bonus task**: set up a relative URL to add a link _from a subpage_ back to the _main index file_.
+- Create an HTML page (no template this time!) and title it `index.html`
+- Add your table with _correct semantic markup_
+- Add a section explaining what your table is showing
+- Check your code with the W3C Validator to make sure it is properly formatted.
+- Submit your file when finished.

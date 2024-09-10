@@ -25,7 +25,13 @@
       </section>
       <h2>Your Form</h2>
       <form id="form-example">
-        <!-- Put your form in here. Be sure to include the proper form controls! -->
+        <label for="name">Enter name (required)</label>
+        <input type="text" name="name" placeholder="Brian Bennett" required />
+        <label for="email">Enter email (required)</label>
+        <input type="email" name="email" placeholder="you@example.com" required />
+        <label for="urgency">Urgency</label>
+        <input type="range" name="urgency" value="50" />
+        <button type="submit">Submit</button>
       </form>
       <h2>Your results:</h2>
       <pre id="form-result"></pre>
