@@ -23,8 +23,8 @@ An `id` is selected with a pound sign (hashtag) in front of the ID name. So, the
 <div class="book">
     <p>This is a book title</p>
 </div>
-<div class="book" id="new">
-    <p>This is a new book</p>
+<div class="book" id="special">
+    <p>This is a special book</p>
 </div>
 ```
 
@@ -36,7 +36,7 @@ An `id` is selected with a pound sign (hashtag) in front of the ID name. So, the
 }
 
 /* id selector */
-#new {
+#special {
     color: red;
 }
 ```
@@ -45,4 +45,19 @@ Styles that aren't conflicting will _both_ be applied to elements that match the
 
 ## Assignment
 
-Edit the attached HTML file to use classes and IDs to style the elements. 
+Edit the attached HTML file to use classes and IDs to style the elements. Follow these requirements for your styles: 
+
+- Each movie block should look the same
+- The _oldest_ entry should have a yellow background.
+- Add at least one block for the _most recent_ Pixar movie (you might need to research). It should have a _green_ background. You can add more if you'd like. You can also add more detail to each movie if you'd like.
+- The _movie title_ should be a different font size and weight than the description line.
+- Set a background color on the entire page.
+
+Some elements to play with:
+
+- `border`
+- `border-radius`
+- `float`
+- `margin`
+- `font-weight`
+- `background-color`
