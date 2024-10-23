@@ -1,0 +1,60 @@
+/* 
+    The root element sets styles that can be used throughout the document.
+    Every variable is preceeded by two dashes.
+*/
+:root {
+    --color-dark: #222;
+    --color-light: #ddd;
+    --small: 1em;
+}
+
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+/*
+    CSS inheritance makes it easy to define _general_ styles
+    which can be inherited by other elements. Specific element
+    styles _override_ the general declaration.
+*/
+.box {
+    padding: var(--small);
+    --color-light: #ededed;
+    --color-dark: #222;
+    color: var(--color-dark);
+
+    border: 1px solid var(--color-dark);
+
+    /* If in a flex container, this rule will apply. */
+    flex: 1 1 0;
+}
+
+/* Define an invisible wrapper to put stuff in */
+.box.container {
+    border: none;
+}
+
+/* Set a flex container */
+.box.container.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--small);
+}
+
+/* 
+    This is _different_ that a container - it is only meant
+    to wrap two (or more) elements meant to  be composed
+    into a visually-unique element. 
+*/
+.box.wrapper {
+    padding: 0;
+    border: 0;
+}
+
+.box.invert {
+    color: var(--color-light);
+    background-color: var(--color-dark);
+}

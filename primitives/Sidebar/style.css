@@ -1,0 +1,49 @@
+:root {
+    font-size: 16px;
+    --color-dark: #444;
+    --color-light: #eee;
+  }
+  
+  html {
+    height: 100%;
+    background: linear-gradient(to top right, rgb(58, 220, 40), rgb(74, 62, 207))
+  }
+  
+  * {
+    font-family: system-ui;
+    box-sizing: border-box;
+  }
+   
+  .with-sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  
+    width: 75vw;
+    margin-inline: auto;
+    background-color: var(--color-light);
+    box-shadow: 0 0 1rem var(--color-dark);
+    border-radius: 1rem;
+  }
+  
+  .sidebar {
+    flex-grow: 1;
+    padding: 1rem;
+
+    /* 
+        If the sidebar is for an image, set a width manually.  
+        If it has content, like links or text, remove flex-basis 
+        and it will take the width of the content.
+    */
+    flex-basis: 20ch;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .not-sidebar {
+    flex-basis: 0;
+    flex-grow: 999;
+    min-inline-size: 50%;
+  
+    padding: 2rem;
+  }
