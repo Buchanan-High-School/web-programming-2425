@@ -39,7 +39,7 @@ Some HTML elements, such as `<a>`, `<span>`, `<em>` and `<strong>` use inline as
 ### `display: block`
 
 ```css
-div {
+span {
     display: block;
 }
 ```
@@ -73,7 +73,7 @@ If we can resize all of these elements, how do we note which sizes to use? There
 
 These are _absolute units_ of measurement and will not change when the browser resizes. You can set pixels to any integer value. These work well if you're trying to position something at an exact distance that should not change regardless of browser window size. You generally do not size containers with pixels because they will not change if the user zooms or changes the browser window.
 
-### `em` - emphasis
+### `em`
 
 The `em` unit is a _relative unit_ which is based on the `font-size` property of a parent. This will change appropraitely if the parent's `font-size` declaration is changed either in the code or in the browser zoom settings.
 
