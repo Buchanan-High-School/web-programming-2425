@@ -1,3 +1,6 @@
 [submodule "source_control"]
 	path = source_control
 	url = C:/Users/bbennett/AppData/Local/Programs/Git/source_control
+[submodule "js"]
+	path = js
+	url = https://github.com/buchanan-high-school/js2425
